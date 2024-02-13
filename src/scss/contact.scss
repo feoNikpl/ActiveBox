@@ -1,0 +1,87 @@
+@import './mixins';
+@import './varables';
+
+.contact{
+    background-color: rgba(53, 60, 101, 1);
+    padding: 70px 0;
+    @media (max-width: 1024px) {
+        padding: 45px 0;
+    }
+    @media (max-width: 320px) {
+        width: 35px, 0;
+    }
+}
+
+.contact-wrap{
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 320px) {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}
+.contact-wrap__item{
+    width: 370px;
+    font-size: 18px;
+    color: $_white;
+    @media (max-width: 1024px) {
+        font-size: 16px;
+        width: 315px;
+    }
+    @media (max-width: 320px) {
+        margin-bottom: 70px;
+        width: 280px;
+    }
+}
+
+.contact-wrap__item:last-child{
+    @media (max-width: 320px) {
+        margin-bottom: 0;
+    }
+}
+
+.contact-wrap__item-title{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 29px;
+    font-size: 18px;
+    @media (max-width: 1024px) {
+        margin-bottom: 18px;
+        font-size: 16px;
+    }
+    @media (max-width: 320px) {
+        margin-bottom: 34px;
+    }
+}
+
+.contact-wrap__item-description{
+    p{
+        font-weight: 400;
+        text-align: center;
+        font-size: 18px;
+        @media (max-width: 1024px) {
+            font-size: 16px;
+        }
+    }
+}
+.contact-wrap__item-links-wrap__link{
+    @include social-media-icon($_gray);
+}
+
+.contact-wrap__item-links-wrap__link:hover{
+    @include social-media-icon($_red_action);
+}
+
+.contact-wrap__item-links-wrap{
+    margin: 0 auto;
+    @include social-madia-list(170px);
+    @media (max-width: 1024px) {
+        @include social-madia-list(144px);
+    }
+    @media (max-width: 320px) {
+        @include social-madia-list(132px);
+    }
+}
+
+
+

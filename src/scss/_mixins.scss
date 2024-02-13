@@ -1,0 +1,28 @@
+@mixin social-media-icon ($color){
+    transition: 0.3s;
+    border: 1px solid $color;
+    text-align: center;
+    width: 39px;
+    a{
+        line-height: 39px;
+        display: block;
+        font-size: 18px;
+        font-weight: 600px;
+        i{
+            color: $color;
+        }
+        @media (max-width: 1024px) {
+            line-height: 33px;
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 1024px) {
+        width: 33px;
+    }
+}
+
+@mixin social-madia-list($width){
+    display: flex;
+    justify-content: space-between;
+    width: $width;
+}
