@@ -1,0 +1,23 @@
+.footer{
+    padding: 24px 0;
+    background-color: rgba(44, 49, 84, 1);
+    @media (max-width: 320px) {
+        padding: 29px 0;
+    }
+}
+
+.footer-description{
+    margin: 0 auto;
+    width: 314px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(128, 128, 128, 1);
+    @media (max-width: 320px) {
+        width: 280px;
+    }
+}
+
+.footer-description-highlited{
+    color: rgba(255, 255, 255, 1);
+}
