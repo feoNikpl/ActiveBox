@@ -1,4 +1,6 @@
-@mixin social-media-icon ($color){
+@import './varables';
+
+@mixin social-media-icon ($color, $hoverColor){
     transition: 0.3s;
     border: 1px solid $color;
     text-align: center;
@@ -16,6 +18,14 @@
             font-size: 16px;
         }
     }
+    &:hover{
+        border: 1px solid $hoverColor;
+        a{
+            i{
+                color: $hoverColor;
+            }
+        }
+    }
     @media (max-width: 1024px) {
         width: 33px;
     }
@@ -26,3 +36,36 @@
     justify-content: space-between;
     width: $width;
 }
+
+@mixin button{
+    margin: 0 auto;
+    width: 370px;
+    text-align: center;
+    transition: 0.3s;
+    background-color: $_red_normal;
+    a{
+        font-size: 24px;
+        font-weight: 900;
+        color: $_white;
+        text-transform: uppercase;
+        line-height: 80px;
+        display: block;
+    }
+    &:hover{
+        box-shadow: 4px 4px 30px 0px $_red_normal;
+    }
+    &:active{
+        background-color: $_red_action;
+        box-shadow: none;
+    }
+    @media (max-width: 1024px) {
+        width: 315px;
+    }
+    @media (max-width: 1024px) {
+        width: 280px;
+        a{
+            font-size: 18px;
+        }
+    }
+}
+
