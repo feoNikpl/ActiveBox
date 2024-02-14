@@ -1,0 +1,111 @@
+@import './varables';
+
+.work {
+    padding: 20px 0;
+}
+
+.work-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(285px, auto));
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(auto-fit, minmax(256px, auto));
+    }
+    @media (max-width: 320px) {
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    }
+}
+
+.work-card {
+    height: 285px;
+    @media (max-width: 1024px) {
+        height: 230px;
+    }
+    @media (max-width: 320px) {
+        height: 144px;
+    }
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            animation-name: hoverWorkImg;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: .3s;
+        }
+    }
+
+    & .work-info {
+        display: none;
+    }
+
+    &:hover .work-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 67, 67, 0.8);
+        color: $_white;
+
+        .work-info__container {
+            display: block;
+
+            .work-info__title {
+                text-align: center;
+                font-size: 24px;
+                font-weight: 900;
+                @media (max-width: 1024px) {
+                    font-size: 18px;
+                }
+                margin-bottom: 20px;
+            }
+
+            .work-info__desc p {
+                text-align: center;
+                font-size: 18px;
+                @media (max-width: 1024px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        animation-name: hoverWork;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes hoverWork {
+        0%{
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes hoverWorkImg {
+        0%{
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.2);
+        }
+    }
+
+    &:active .work-info {
+        background-color: rgba(185, 12, 12, 0.8)
+    }
+}
