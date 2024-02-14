@@ -1,0 +1,83 @@
+@import './varables';
+
+.testimonials-wrap{
+    padding-bottom: 40px;
+    display: flex;
+    @media (max-width: 320px) {
+        display: block;
+    }
+}
+
+.testimonials__img {
+    flex-basis: 50%;
+    height: 490px;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+    @media (max-width: 1024px) {
+        height: 332px;
+    }
+    @media (max-width: 320px) {
+        height: 212px;
+    }
+}
+
+.testimonials__text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(92, 50, 73, 1);
+}
+
+.testimonials__text-descr{
+    color: $_white;
+    font-family: "Cardo";
+    font-style: italic;
+    font-weight: 400;
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 10px;
+    width: 330px;
+    @media (max-width: 1024px) {
+        font-size: 24px;
+    }
+    @media (max-width: 320px) {
+        width: 280px;
+        text-align: center;
+        margin-top: 8px;
+    }
+}
+
+.testimonials__text-title{
+    color: $_white;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    @media (max-width: 1024px) {
+        font-size: 12px;
+    }
+    @media (max-width: 320px) {
+        text-align: center;
+        margin-bottom: 95px;
+    }
+}
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next{
+    color: $_white;
+}
+.swiper .swiper-pagination-bullet{
+    width: 14px;
+    height: 14px;
+    background-color: rgba(92, 50, 73, 1);
+    @media (max-width: 320px) {
+        width: 9px;
+        height: 9px;;
+    }
+}
