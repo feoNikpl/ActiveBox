@@ -43,6 +43,7 @@
     text-align: center;
     transition: 0.3s;
     background-color: $_red_normal;
+    cursor: pointer;
     a{
         font-size: 24px;
         font-weight: 900;
@@ -52,7 +53,10 @@
         display: block;
     }
     &:hover{
-        box-shadow: 4px 4px 30px 0px $_red_normal;
+        animation-name: button;
+        animation-duration: 0.5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
     }
     &:active{
         background-color: $_red_action;
@@ -69,3 +73,12 @@
     }
 }
 
+@keyframes button {
+    0%{
+        box-shadow: 4px 4px 30px 0px $_red_normal;
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.95);
+    }
+}
