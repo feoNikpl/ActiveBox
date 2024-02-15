@@ -52,7 +52,11 @@
         display: block;
     }
     &:hover{
-        box-shadow: 4px 4px 30px 0px $_red_normal;
+        animation-name: buttonAnimation;
+        animation-duration: 0.5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
     }
     &:active{
         background-color: $_red_action;
@@ -66,6 +70,17 @@
         a{
             font-size: 18px;
         }
+    }
+}
+
+@keyframes buttonAnimation {
+    0%{
+        box-shadow: none;
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 4px 4px 30px 0px $_red_normal;
+        transform: scale(0.95);
     }
 }
 
